@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <div class="nav-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">SSOR</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    TAREAS
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="actividad2.html">Actividad 2</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="actividad3.html">Actividad 3</a>
+                    <div class="dropdown-divider"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </div>
+
+    <div class="col-6 light-bg-center">
+        <div class="container">
+            <h2 class="title">Actividad 5</h2>
+            <p class="description">
+                En esta actividad se realizó una investigación acerca del arranque y parada del sistema, sus características y descripciones
+            </p>
+
+
+            <h5>Arranque del sistema</h5>
+
+            <img class="img-intern" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Elitegroup_761GX-M754_-_AMIBIOS_%28American_Megatrends%29_in_a_Winbond_W39V040APZ-5491.jpg" alt="">
+
+            <p class="simple-text">En el proceso de arranque se prepara al sistema para ser usado por los usuarios</p>
+
+            <p class="simple-text">El arranque de un ordenador actual tiene 2 fases:</p>
+            <ul>
+                <li>Arranque hardware</li>
+                <li>Arranque del S.O.</li>
+            </ul>
+            
+            <p class="simple-text"><span style="font-weight: bold;">Iniciador ROM:</span> Programa de arranque disponible en la ROM</p>
+            <p class="simple-text">
+                Al arrancar el ordenador se genera una señal eléctrica que carga un set de valores predefinidos en los registros. Los registros son un conjunto de 
+                valores predefinidos del sistema que permiten ejecutar operaciones de hardware. En el contador del programa se carga la dirección de inicio del iniciador ROM,
+                la cual está definida para identificar la posición que permite arrancar el sistema. El iniciador ROM realiza tres funciones:
+            </p>
+            <table class="table-text">
+                <tr><td>Comprueba el sistema, detectando sus características y comprobando su funcionamiento </td></tr>
+                <tr><td>Lee y almacena en memoria el programa cargador del S.O.</td></tr>
+                <tr><td>Pasa el control al cargador del S.O., saltando a la dirección de memoria donde lo ha almacenado.</td></tr>
+            </table>
+            <br>
+
+            <p class="simple-text">
+                El programa cargador (master boot program o boot program) está en los primeros sectores del disco y con un tamaño prefijado. Estos sectores se conocen
+                como Master Boot Record (o Volume Boot Record). Este programa el encargado de cargar el núcleo (o kernel) del S.O. y pasarle el control para comenzar el arranque.
+                El iniciador de la ROM y el S.O. tienen un acuerdo sobre el programa cargador, (ubicación, dirección de arranque y tamaño), de esta manera el iniciador puede 
+                soportar varios S.O. (además de usar un programa auxilir de arranque).
+            </p>
+
+            <p class="simple-text">El núcleo del S.O. continúa el proceso de arranque:</p>
+            <ul>
+                <li>Realiza una comprobación del hardware del sistema</li>
+                <li>Se prepara a sí mismo para ejecutar el sistema inicializando sus</li>
+                <li>tablas internas, creando las estructuras de datos necesarias, etc.</li>
+                <li>A continuación crea el proceso Init y le pasa el control</li>
+            </ul>
+            <br>
+            
+            <p class="simple-text">
+                Para que el núcleo no tenga un tamaño muy grande, la mayoría de las opciones se compilan como módulos, que se cargarán cuando se necesiten.
+                Por ello, en el arranque el núcleo necesitará cargar algunos módulos para poder iniciar el sistema.
+                El proceso Init termina el proceso de arranque, dejando el sistema en modo multiusuario preparado para que los usuarios trabajen en él.
+            </p>
+
+            <h5>Parada del sistema</h5>
+
+            <img class="img-intern" src="https://www.marianojulian.com/wp-content/uploads/2015/08/shutdown_linux_ubuntu_poweroff.jpg" alt="">
+            <br>
+
+            <p class="simple-text">
+                Las acciones que se realizan en el proceso de parada son:
+            </p>
+
+            <table class="table-text">
+                <tr><td>Se notifica a los usuarios</td></tr>
+                <tr><td>Procesos en ejecución enviar la señal de terminación (TERM)</td></tr>
+                <tr><td>Se paran los demonios</td></tr>
+                <tr><td>A los usuarios que quedan conectados se les echa del sistema</td></tr>
+                <tr><td>Procesos que queden en ejecución enviar la señal de fin (KILL)</td></tr>
+                <tr><td>Actualizaciones de disco pendientes (integridad del SF) con sync</td></tr>
+            </table>
+            <br>
+
+            <h6>Caídas del bloque y Problemas en el arranque</h6>
+            <p class="simple-text">
+                Causas de caídas del sistema:
+            </p>
+            <ul>
+                <li>Fallos hardware</li>
+                <li>Errores de hardware irrecuperables</li>
+                <li>Fallos de luz (cortes o altibajos)</li>
+                <li>Otros problemas ambientales</li>
+                <li>Problemas de entrada/salida</li>
+                <li>Problemas de algún sistema de ficheros</li>
+            </ul>
+
+            <img src="https://www.profesionalreview.com/wp-content/uploads/2018/10/Windows-10-no-arranca-1280x720.png" alt="" class="img-intern">
+            <br>
+            <br>
+
+            <h5>Problemas de arranque</h5>
+            <ul>
+                <li>Hardware mal</li>
+                <li>No se puede leer el sistema de ficheros de los discos de trabajo</li>
+                <li>Hay en el disco áreas dañadas que no pertenecen al sistema de ficheros (p.e. tabla de particiones)</li>
+                <li>Hardware incompatible</li>
+                <li>Errores en la configuración del sistema</li>
+            </ul>
+            <br>
+
+            <h7 class="title" >Bibliografías</h7>
+            
+            <table class="table-text">
+                <tr><td>González Férez, M. P. (n.d.). Arranque y parada del sistema. Retrieved October 10, 2020, from http://infocornella.weebly.com/uploads/7/8/2/5/7825663/arranque_y_parada_del_sistema.pdf</td></tr>
+            </table>
+            <br>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+1.- Analizar las  características  generales  de  los  Sistemas Operativos de Red, 
+     e identificar los existentes sistemas operativos en la actualidad y documentar en una tabla comparativa.
+
+-->
