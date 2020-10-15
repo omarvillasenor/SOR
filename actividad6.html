@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>SSOR</title>
+</head>
+
+<body>
+
+    <div class="nav-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">SSOR</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    TAREAS
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="actividad2.html">Actividad 2</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="actividad3.html">Actividad 3</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="actividad5.html">Actividad 5</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="actividad6.html">Actividad 6</a>
+                    <div class="dropdown-divider"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </div>
+
+    <div class="col-6 light-bg-center">
+        <div class="container">
+            <h2 class="title">Actividad 6</h2>
+            <p class="description">
+                En esta actividad se investigo  que es y como se elimina un controlador de dominio y objetos que administra un dominio.
+            </p>
+
+
+            <h4>¿Qué es un controlador de dominio?</h4>
+
+            <img class="img-intern" src="https://www.manageengine.com/products/admp/images/banner-img-rgt.png" alt="">
+
+
+            <p class="simple-text">
+            Los administradores de red tienen presente que para aprovechar el potencial de los equipos con Windows Server es por medio de la creación de dominios. </br></br>
+            Los dominios almacenan de manera centralizada la información de los usuarios como sus cuentas, los dispositivos como impresoras, directorios, etc. De igual manera facilitan las tareas del adminsitrador proporcionando seguridad.</br>
+            En Windows Server el controlador de dominio es conocido como Active Directory (AD).
+            </p>
+
+            <h5>Caracteristicas de un controlador de dominio</h5>
+
+            <p class="simple-text">
+              Los controladores de dominio eliminan las conjeturas y las molestias de administrar computadoras y dispositivos en su red al “conectarlos” a un sistema maestro. Esto le permite a su administrador establecer salvaguardas, permisos y otros protocolos de acceso de forma remota en cada dispositivo.
+              <ul>
+                <li>Dar acceso solo a aquellos que lo necesitan</br></br>
+                El controlador de dominio le permite crear configuraciones mediante las cuales los usuarios pueden iniciar sesión en cualquier computadora que esté en su dominio y sus privilegios de seguridad los seguirán y se configurarán automáticamente en cualquier computadora.</br></br>
+                </li>
+                <li>Evite las infracciones de datos de “error del operador”.</br></br>
+                Un controlador de datos le permite evitar contraseñas demasiado simples al crear reglas para toda la red que requieren que los usuarios creen contraseñas únicas y complejas.</br></br>
+                </li>
+                <li>La gestión centralizada reduce los costos.</br></br>
+                Tener la capacidad de establecer parámetros de inicio de sesión y seguridad para todos los dispositivos desde un concentrador central reduce el tiempo y el costo de tener que proteger y configurar cada dispositivo individualmente, lo que puede llevar horas en comparación con solo minutos desde un controlador de dominio.</br></br>
+                </li>
+                <li>Recursos informáticos compartidos.
+                </br></br>
+                </li>
+
+                <li>Cerrar el acceso no autorizado</br></br>
+                - Bloquee las cuentas de usuario con demasiados intentos fallidos de inicio de sesión.</br>
+                - Inhabilite las cuentas de usuario inmediatamente cuando un empleado abandone su empresa.</br>
+                - Configure automáticamente todas las computadoras para bloquear la pantalla después de un período de inactividad establecido.</br>
+                - Requerir contraseñas de inicio de sesión para pantallas bloqueadas.</br>
+                -Restrinja el acceso USB (unidad flash) por permisos de usuario.</br>
+
+                </br></br>
+                <img class="img-intern" src="https://ikastaroak.birt.eus/edu/argitalpen/backupa/20200331/1920k/es/ASIR/ISO/ISO06/es_ASIR_ISO06_Contenidos/ISO06_CONT_R34_foto29.png" alt="">
+                </li>
+
+            </ul>
+
+            <h5>Eliminación de un controlador de dominio</h5>
+            <p class="simple-text">
+              Para eliminar el controlador de un dominio se ejemplificará con Windows server: </br>
+              <li>
+                Iniciamos sesión como Administrador del equipo y desde Inicio > Ejecutar ejecutamos el comando dcpromo. Se nos muestra una pantalla de inicio del asistente de confi-guración de DA. </br>
+              </li>
+              
+              <li>
+                Si nuestro dominio contase con algún otro bosque, con controladores adicionales de  dominio  o  con  subdominios,  no  podríamos  elimi-narlo. En este caso tendríamos que ir eliminando los controladores de dominio jerárquicamente de menor a mayor jerarquía.Teniendo esto claro, pulsamos Aceptar
+                </br>
+              </li>
+              
+              <li>
+                Pulsamos Siguiente y aparece una pantalla dándonos información sobre las particiones en las que se ha replicado la base de datos de DA. Pul-samos Siguiente y sale una nueva pantalla en la que indicaremos si queremos eliminar o no toda la informa-ción que las particiones de la base de datos contienen. 
+                </br>
+              </li>
+              <li>
+                Una vez marcada la casilla Eliminar todas las particio-nes, pulsamos en Siguiente. 
+                </br>
+              </li>
+              <li>
+                Marcamos la casilla de verificación que indica esta circuns-tancia y pulsamos Siguiente.
+                </br>
+              </li>
+              <li>
+                Pulsamos Siguiente en las pantallas posteriores y el pro-ceso de despromoción comienza. Pasados unos minu-tos, cuando finalice, tendremos que reiniciar el equipo o marcar la casilla Reiniciar al completar de la última pantalla que aparece.
+                </br>
+              </li>
+              
+
+
+
+            
+            
+            <h5>Objetos que administra un dominio</h5>
+            <img class="img-intern" src="https://casandrasoft.com/wp-content/uploads/2017/12/features13.jpg" alt="">
+            <li>
+              Usuarios globales </br></br>
+              - Identificar y autentificar a las personas (usuarios) que podrán acceder al sistema, es decir, loguearse al controlador de dominio.
+              -Administrar y gestionar los permisos y privilegios que servirán para controlar el acce-so que los usuarios hacen a los recursos del sistema. </br></br>
+            </li>
+            <li>
+              Grupos </br></br>
+              En  el  controlador  de  dominio  pueden  crearse  diferentes  tipos  de  grupos  de  usuarios:  grupos de distribución y grupos de seguridad </br></br>
+            </li>
+            <li>
+              Equipos </br></br>
+              La misma base de datos del Directorio Activo de un dominio que conserva toda la infor-mación relativa a cuentas de usuarios y grupos globales almacena asimismo informa-ción relativa a los equipos (computers) que forman parte del dominio. </br></br>
+            </li>
+            <li>
+              Unidades organizativas</br></br>
+              Son objetos del directorio que a su vez pueden contener otros ob-jetos. El uso fundamental de las UO es delegar la administración de sus objetos a otros usuarios  distintos  del  administrador  del  dominio  y  personalizar  el  comportamiento  de  los usuarios y/o equipos mediante la aplicación de directivas </br></br>
+            </li>
+            
+            <h7 class="title" >Bibliografías</h7>
+            <li>M. (2020). Controladores de dominios en redes Windows. Retrieved 2020, from https://www.mheducation.es/bcv/guide/capitulo/8448183940.pdf
+            </li>
+            <li>dmin, &amp; Admin. (2020, March 16). ¿Qué son los controladores de dominio? Retrieved October 14, 2020, from https://msinetworks.com.do/blog/que-son-los-controladores-de-dominio/
+            </li>
+            <li>López, P., &amp; López, S. (2013, October 30). Forzar la eliminación de un controlador de dominio de Windows Server 2008. Retrieved October 14, 2020, from https://www.soluciones.si/blog/2013/10/30/forzar-la-eliminacion-de-un-controlador-de-dominio-de-windows-server-2008/
+            </li>
+            <li>Servicio de directorio. (n.d.). Retrieved October 14, 2020, from https://n9.cl/uysly
+            </li>
+            </p>
+          </p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+Actividad 6
+2.4 Eliminación de un controlador de dominio
+2.5 Objetos que administra un dominio
+
+1.-  Investigar  como que es y como se elimina un controlador de dominio y objetos que administra un dominio. 
+
+-->
